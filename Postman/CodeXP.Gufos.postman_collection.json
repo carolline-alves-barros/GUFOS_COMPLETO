@@ -1,0 +1,1406 @@
+{
+	"info": {
+		"_postman_id": "03c954fb-d515-42a7-aef6-dc9daa2e133b",
+		"name": "CodeXP.Gufos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Categoria",
+			"item": [
+				{
+					"name": "Categorias.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlGufos}}/Categorias",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categorias.BuscarPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlGufos}}/Categorias/1",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Categorias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categorias.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"titulo\": \"Cadastro Teste\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Categorias/",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Categorias",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categorias.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"categoriaId\": 6,\n\t\"titulo\": \"Update Teste\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Categorias/6",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Categorias",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categorias.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Categorias/6",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Categorias",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categorias.FiltrarPorNome",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\"e\"",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Categorias/FiltrarPorNome",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Categorias",
+								"FiltrarPorNome"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categorias.Ordenar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Categorias/Ordenar",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Categorias",
+								"Ordenar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TipoUsuario",
+			"item": [
+				{
+					"name": "TiposUsuario.Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlGufos}}/TiposUsuario",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"TiposUsuario"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TiposUsuario.BuscarPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlGufos}}/TiposUsuario/1",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"TiposUsuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TiposUsuario.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"titulo\": \"Cadastro Teste\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/TiposUsuario/",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"TiposUsuario",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TiposUsuario.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"tipoUsuarioId\": 4,\n\t\"titulo\": \"Update Teste\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/TiposUsuario/4",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"TiposUsuario",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TiposUsuario.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/TiposUsuario/4",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"TiposUsuario",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TiposUsuario.FiltrarPorNome",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\"adm\"",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/TiposUsuario/FiltrarPorNome",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"TiposUsuario",
+								"FiltrarPorNome"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TiposUsuario.Ordenar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/TiposUsuario/Ordenar",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"TiposUsuario",
+								"Ordenar"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Usuario.Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlGufos}}/Usuarios",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario.BuscarPorID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlGufos}}/Usuarios/1",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"UsuarioTeste\",\n    \"email\": \"teste@teste.com\",\n    \"senha\": \"123\",\n    \"tipoUsuarioId\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Usuarios/",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Usuarios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"usuarioId\": 6,\n    \"nome\": \"UsuarioTesteUpdate\",\n    \"email\": \"teste@teste.com\",\n    \"senha\": \"123\",\n    \"tipoUsuarioId\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Usuarios/6",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Usuarios",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Usuarios/6",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Usuarios",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario.FiltrarPorNome",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\"Paulo\"",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Usuarios/FiltrarPorNome",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Usuarios",
+								"FiltrarPorNome"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario.Ordenar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Usuarios/Ordenar",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Usuarios",
+								"Ordenar"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Evento",
+			"item": [
+				{
+					"name": "Evento.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlGufos}}/Eventos",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Eventos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Evento.BuscarPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlGufos}}/Eventos/1",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Eventos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Evento.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"titulo\": \"EventoTeste\",\n    \"categoriaId\": 1,\n    \"acessoLivre\": false,\n    \"dataEvento\": \"2019-08-06T18:00:00\",\n    \"localizacaoId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Eventos/",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Eventos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Evento.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"eventoId\" : 4,\n    \"titulo\": \"EventoTesteAtualizado\",\n    \"categoriaId\": 1,\n    \"acessoLivre\": false,\n    \"dataEvento\": \"2019-08-06T18:00:00\",\n    \"localizacaoId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Eventos/4",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Eventos",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Evento.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Eventos/4",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Eventos",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Evento.FiltrarPorNome",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\"Est\"",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Eventos/FiltrarPorNome",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Eventos",
+								"FiltrarPorNome"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Evento.Ordenar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Eventos/Ordenar",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Eventos",
+								"Ordenar"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Localizacao",
+			"item": [
+				{
+					"name": "Localizacao.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlGufos}}/Localizacoes",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Localizacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Localizacao.BuscarPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlGufos}}/Localizacoes/1",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Localizacoes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Localizacao.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cnpj\": \"22345678912345\",\r\n    \"razaoSocial\": \"Escola SENAI de Informatica Cadastro\",\r\n    \"endereco\": \"Al. Barão de Limeira, 539\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Localizacoes/",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Localizacoes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Localizacao.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"localizacaoId\": 4,\r\n    \"cnpj\": \"22345678912399\",\r\n    \"razaoSocial\": \"Escola SENAI de Informatica Update\",\r\n    \"endereco\": \"Al. Barão de Limeira, 539\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Localizacoes/4",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Localizacoes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Localizacao.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Localizacoes/4",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Localizacoes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Localizacao.FiltrarPorNome",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\"SENAI\"",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Localizacoes/FiltrarPorNome",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Localizacoes",
+								"FiltrarPorNome"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Localizacao.Ordenar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Localizacoes/Ordenar",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Localizacoes",
+								"Ordenar"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Presenca",
+			"item": [
+				{
+					"name": "Presenca.Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlGufos}}/Presencas",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Presencas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Presenca.BuscarPorID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlGufos}}/Presencas/1",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Presencas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Presenca.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventoId\": 1,\r\n    \"usuarioId\": 4,\r\n    \"status\": \"AGUARDANDO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Presencas/",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Presencas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Presenca.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"presencaId\" : 4,\r\n\t\"eventoId\": 1,\r\n    \"usuarioId\": 4,\r\n    \"status\": \"CONFIRMADO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Presencas/4",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Presencas",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Presenca.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Presencas/4",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Presencas",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Presenca.FiltrarPorNome",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\"Paulo\"",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Presencas/FiltrarPorNome",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Presencas",
+								"FiltrarPorNome"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Presenca.Ordenar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Presencas/Ordenar",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Presencas",
+								"Ordenar"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"adm@adm.com\",\r\n    \"senha\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlGufos}}/Login/",
+							"host": [
+								"{{urlGufos}}"
+							],
+							"path": [
+								"Login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	]
+}
