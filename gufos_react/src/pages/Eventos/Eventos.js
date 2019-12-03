@@ -44,7 +44,7 @@ export default class Eventos extends Component{
 
     //#region GETs
     getEventos = () =>{
-        api.get('/evento')
+        api.get('/eventos')
         .then(response => {
             if(response.status === 200){
                 this.setState({ listaEventos : response.data })
@@ -92,7 +92,7 @@ export default class Eventos extends Component{
             this.state.postEvento.acessoLivre = true
         }
 
-        api.post('/evento', this.state.postEvento)
+        api.post('/eventos', this.state.postEvento)
         .then(response => {
             console.log(response);
         })
@@ -143,7 +143,7 @@ export default class Eventos extends Component{
                                                     {!e.acessoLivre && "Não"}
                                                 </td>
                                                 <td>{e.categoria.titulo}</td>
-                                                <td>{e.localizacao.endereco}</td>
+                                                {/* <td>{e.localizacao.endereco}</td> */}
                                                 <td>
                                                     <MDBBtn color="primary" size="sm">
                                                         <i className="fas fa-edit"></i>

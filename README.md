@@ -8,7 +8,12 @@
 > Instalamos globalmente nosso acesso ao create-react-app
 
 ```bash
-npm install -g create-react-app
+npm install -g create-react-app 
+
+ou 
+
+npx install -g create-react-app
+
 ```
 ## Criação do Projeto
 > Criamos nosso projeto:
@@ -618,6 +623,13 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 ```
+
+> Para chamar o Fontawesome do MDB devemos ir em public>index.html e inserir no head  
+```jsx
+
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+```
+
 
 > Depois rodamos nossa aplicação novamente.
 ```bash
